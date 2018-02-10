@@ -1,0 +1,45 @@
+html{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+/* 轮播图 */
+
+.scrollContent{
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollContent ul{
+    /* ul的具体的高度在js里面计算 */
+    min-height: 143px;
+}
+
+.scrollContent ul li{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    /* 这句话的意思是让所有的图片都出去，并且不要用left去移动，因为这样会改变
+	li的初始的原点 */
+    transform: translateX(300%);
+}
+
+.points{
+    bottom: 10px;
+}
+
+.points li{
+   	width: 5px;
+	height: 5px;
+	border: 1px solid #fff;
+	float: left;
+	margin:0 3px;
+	border-radius: 50%;
+}
+
+.points li.active {
+	background-color: #fff;
+}
+
+
